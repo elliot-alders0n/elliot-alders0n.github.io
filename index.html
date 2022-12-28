@@ -3,33 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="mobile-web-app-capable" content="yes"> 
     <title>You've been owned</title>
   </head>
-  <script>
-    window.onload=function(){ 
-      document.body.scrollTop = document.body.scrollHeight
-    };
-  </script>
-  <style>
-    html,body{
-      margin:0;
-      padding:0;
-    }
-    
-    html {
-      background: url(/resources/android-hacked-no-loop.gif) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-  </style>
-  
   
   <body>
+    <video width="100%" id="hacked-video">
+      <source src="/resources/android-hacked.mp4" type="video/mp4">
+    </video>
+    
     <script>
-      
+    var elem = document.getElementById("hacked-video");
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    }
+      openFullscreen();
       /*
       var is_android = (navigator.userAgent.indexOf( "Android" ) !== -1);
       var is_iphone = (navigator.userAgent.indexOf( "iPhone" ) !== -1);
