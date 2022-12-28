@@ -5,33 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You've been owned</title>
   
-     <script>
-         function hideAddressBar()
-        {
-          if(!window.location.hash)
-          {
-          if(document.height < window.outerHeight)
-          {
-              document.body.style.height = (window.outerHeight + 50) + 'px';
-          }
-
-          setTimeout( function(){ window.scrollTo(0, 50); }, 50 );
-          }
-        }
-
-        window.addEventListener("load", function(){ if(!window.pageYOffset){ hideAddressBar(); } } );
-        window.addEventListener("orientationchange", hideAddressBar );
-       
-       
-       window.addEventListener("load",function() {
-        // Set a timeout...
-        setTimeout(function(){
-          // Hide the address bar!
-           window.scrollTo(0, 50);
-        }, 0);
-      });
-       
-    </script>
   </head>
   <style>
     body{
@@ -40,6 +13,10 @@
     }
   </style>
   <body>
+    <script>
+        window.open ('www.google.es', 'newwindow', config='toolbar=no, menubar=no, scrollbars=no, titlebar=no,resizable=no,location=no, directories=no, status=no')
+    </script>
+    
     <script>
       
     </script>
