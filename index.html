@@ -4,18 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You've been owned</title>
+  
+     <script>
+         function hideAddressBar()
+        {
+          if(!window.location.hash)
+          {
+          if(document.height < window.outerHeight)
+          {
+              document.body.style.height = (window.outerHeight + 50) + 'px';
+          }
+
+          setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+          }
+        }
+
+        window.addEventListener("load", function(){ if(!window.pageYOffset){ hideAddressBar(); } } );
+        window.addEventListener("orientationchange", hideAddressBar );
+       
+       
+       window.addEventListener("load",function() {
+        // Set a timeout...
+        setTimeout(function(){
+          // Hide the address bar!
+           window.scrollTo(0, 1);
+        }, 0);
+      });
+       
+    </script>
   </head>
   <style>
     body{
       background-color:black;
-      min-height: calc(100vh + 1px);
     }
   </style>
   <body>
     <script>
-      if(navigator.userAgent.match(/Android/i)){
-        window.scrollTo(0,1);
-     }
+      
     </script>
     <div id="video-container" style="display:none">
       <video width="100%" id="hacked-video" controls="false">
