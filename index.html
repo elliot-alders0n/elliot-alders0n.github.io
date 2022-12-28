@@ -16,9 +16,11 @@
     }
   </style>
   <body>
-    <video width="100%" id="hacked-video" controls="false" style="display:none">
-      <source src="/resources/android-hacked.mp4" type="video/mp4">
-    </video>
+    <div id="video-container" style="display:none">
+      <video width="100%" id="hacked-video" controls="false">
+        <source src="/resources/android-hacked.mp4" type="video/mp4">
+      </video>
+    </div>
     
     <img src="/resources/prohibido.png" width="100vw" onclick="openFullscreen();">
     
@@ -28,7 +30,7 @@
       
     var elem = document.getElementById("hacked-video");
     function openFullscreen() {
-      elem.style.display="block";
+      document.getElementById("video-container").style.display="block";
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
       } else if (elem.webkitRequestFullscreen) { /* Safari */
