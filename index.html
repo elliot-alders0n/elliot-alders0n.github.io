@@ -16,13 +16,19 @@
     }
   </style>
   <body>
-    <video width="100%" id="hacked-video">
+    <video width="100%" id="hacked-video" style="visibility:hidden">
       <source src="/resources/android-hacked.mp4" type="video/mp4">
     </video>
     
+    <img src="/resources/prohibido.png" width="100vw" onclick="openFullscreen();">
+    
+    
+    
     <script>
+      
     var elem = document.getElementById("hacked-video");
     function openFullscreen() {
+      elem.style.visibility="visible";
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
       } else if (elem.webkitRequestFullscreen) { /* Safari */
