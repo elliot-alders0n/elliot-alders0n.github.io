@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You've been owned</title>
   </head>
-  
-  <body>
+  <style>
+    body{
+      background-color:black;
+    }
+  </style>
+  <body onload="openFullscreen()">
     <video width="100%" id="hacked-video">
       <source src="/resources/android-hacked.mp4" type="video/mp4">
     </video>
