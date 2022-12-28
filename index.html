@@ -6,10 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>You've been owned</title>
     <link rel="stylesheet" href="style.css">
+    
+    
   </head>
   
   <body>
-    <h1>This is a test</h1>
+    <script>
+      
+      var is_android = (navigator.userAgent.indexOf( "Android" ) !== -1);
+      var is_iphone = (navigator.userAgent.indexOf( "iPhone" ) !== -1);
+      
+      if(is_android){
+        document.getElementById("div-1").innerHTML = "Android";
+      }
+      
+      if(is_iphone){
+        document.getElementById("div-1").innerHTML = "iPhone";
+      }
+      
+    </script>
+    <h1 id="div-1"></h1>
   </body>
   
 </html>
