@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You've been owned</title>
+    <script>
+      window.onload = function() {
+        openFullscreen();
+      };
+    </script>
   </head>
   <style>
     body{
       background-color:black;
     }
   </style>
-  <body onload="openFullscreen()">
+  <body>
     <video width="100%" id="hacked-video">
       <source src="/resources/android-hacked.mp4" type="video/mp4">
     </video>
@@ -26,7 +31,6 @@
         elem.msRequestFullscreen();
       }
     }
-      openFullscreen();
       /*
       var is_android = (navigator.userAgent.indexOf( "Android" ) !== -1);
       var is_iphone = (navigator.userAgent.indexOf( "iPhone" ) !== -1);
