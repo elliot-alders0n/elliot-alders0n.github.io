@@ -13,10 +13,24 @@
         src: url('/fonts/SpecialElite-Regular.ttf');
       }
       
+      @font-face {
+        font-family: "DigitalCounter";
+        src: url('/fonts/digital_counter_7.ttf');
+      }
+      
       #message{
         color: red;
         font-family: 'SpecialElite';
         width: 33%
+      }
+      
+      #counter-container{
+        color: white;
+      }
+      
+      #counter{
+          font-family: 'DigitalCounter';
+          font-size: large;
       }
       
       
@@ -35,6 +49,11 @@
       payment and check the given passwords enter
       your assigned bitcoin address or your personal
       key.</p>
+    </div>
+    
+    <div id="counter-container">
+      <h1> Time left before the price goes up </h1>
+      <p id="counter">41:07:06</p>
     </div>
     
   </body>
