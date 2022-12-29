@@ -7,15 +7,19 @@
     <script>
      document.addEventListener("fullscreenchange", function() {
        console.log(event);
+       alert(document.fullscreenElement);
       });
       document.addEventListener("mozfullscreenchange", function() {
           console.log(event);
+        alert(document.fullscreenElement);
       });
       document.addEventListener("webkitfullscreenchange", function() {
           console.log(event);
+        alert(document.fullscreenElement);
       });
       document.addEventListener("msfullscreenchange", function() {
           console.log(event);
+          alert(document.fullscreenElement);
       });
     </script>
   </head>
