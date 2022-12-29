@@ -49,7 +49,9 @@
     </style>
     <script>
       var today = new Date().getTime();
-      var deadline = new Date().setDate(today + 7);
+      var deadline = new Date();
+      deadline.setDate(today + 7);
+      
       var x = setInterval(function() {
       var now = new Date().getTime();
       var t = deadline - now;
