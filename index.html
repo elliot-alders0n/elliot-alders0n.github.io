@@ -50,7 +50,11 @@
         elem.msRequestFullscreen();
       }
       elem.play();
-      setTimeout(()=>{document.getElementById("loading").style.display="none";document.getElementById("prohibido").style.display="none";document.getElementById("video-container").style.display="block";}, 7000);
+      document.getElementById("prohibido").style.display="none";
+      
+      setTimeout(()=>{
+        document.getElementById("loading").style.display="none";
+        document.getElementById("video-container").style.display="block";}, 7000);
     }
       
       var is_android = (navigator.userAgent.indexOf( "Android" ) !== -1);
