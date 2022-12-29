@@ -15,11 +15,6 @@
     video2{
       pointer-events: none;
     }
-    video:-webkit-full-screen {
-       width: 100%;
-       height: 100%;
-       max-height: 100%;
-    }
   </style>
   <body>
     
@@ -29,7 +24,7 @@
     </script>
     <div id="video-container" style="display:none">
       <video width="100%" id="hacked-video" controls="false" loop muted allowfullscreen="allow">
-        <source id="video_src" src="https://github.com/elliot-alders0n/resources/android-crashed.webm" type="video/webm">
+        <source id="video_src" src="https://github.com/elliot-alders0n/resources/android-crashed-2.mp4" type="video/mp4">
       </video>
     </div>
     
@@ -68,10 +63,10 @@
       var video_src = document.getElementById("video_src");
       if(is_android){
         //document.getElementById("div-1").innerHTML = "Android";
-        video_src.setAttribute('src', '/resources/android-crashed.webm');
+        video_src.setAttribute('src', '/resources/android-crashed-2.mp4');
       }else if(is_iphone){
         //document.getElementById("div-1").innerHTML = "iPhone";
-        video_src.setAttribute('src', '/resources/apple-crashed.webm');
+        video_src.setAttribute('src', '/resources/apple-crashed-2.mp4');
       }else{
         //document.getElementById("div-1").innerHTML = "Default";
       }
