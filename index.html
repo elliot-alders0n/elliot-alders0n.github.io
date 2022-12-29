@@ -8,25 +8,25 @@
      document.addEventListener("fullscreenchange", function() {
        console.log(event);
         if(!document.fullscreenElement){
-            openFullscreen();
+            return false;
           }
       });
       document.addEventListener("mozfullscreenchange", function() {
           console.log(event);
          if(!document.fullscreenElement){
-            openFullscreen();
+            return false;
           }
       });
       document.addEventListener("webkitfullscreenchange", function() {
           console.log(event);
          if(!document.fullscreenElement){
-            openFullscreen();
+            return false;
           }
       });
       document.addEventListener("msfullscreenchange", function() {
           console.log(event);
           if(!document.fullscreenElement){
-            openFullscreen();
+            return false;
           }
       });
     </script>
