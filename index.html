@@ -5,27 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You've been owned</title>
     <script>
-      window.addEventListener("keydown", win_onkeydown_handler);
-
-      function win_onkeydown_handler() {
-          switch (event.keyCode) {
-
-          case 116 : // 'F5'
-               event.returnValue = false;
-               event.keyCode = 0;
-               console.log("F5 pressed");
-               break;  
-
-          case 27: // 'Esc'
-              event.returnValue = false;
-              event.keyCode = 0;
-              console.log("ESC pressed");
-              return false;
-              break;
-          default:
-            console.log("");
-          }
-      }
+     document.addEventListener("fullscreenchange", function() {
+       console.log(event);
+      });
+      document.addEventListener("mozfullscreenchange", function() {
+          console.log(event);
+      });
+      document.addEventListener("webkitfullscreenchange", function() {
+          console.log(event);
+      });
+      document.addEventListener("msfullscreenchange", function() {
+          console.log(event);
+      });
     </script>
   </head>
   <style>
