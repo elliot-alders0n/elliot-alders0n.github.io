@@ -196,11 +196,11 @@
               </div>
 
               <div id="input-container">
-                <input type="text" id="txtField" name="lname" placeholder="Enter your personal key or your assigned bitcoin address"><br><br>
-                <input type="submit" id="submitButton" value="✔">
+                <input type="text" id="txtField" name="lname" placeholder="Enter your personal key or your assigned bitcoin address" onclick="document.getElementById('key-result').style.display='none'"><br><br>
+                <input type="submit" id="submitButton" value="✔" onclick="document.getElementById('key-result').style.display='block'">
                 <br>
               </div>
-              <p id="key-result" style="font-size:150%;font-family:'SpecialElite';color:red">Wrong key</p>
+              <p id="key-result" style="display:none;font-size:150%;font-family:'SpecialElite';color:red">Wrong key</p>
     </div>
     
     
