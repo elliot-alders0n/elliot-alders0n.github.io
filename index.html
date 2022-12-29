@@ -21,6 +21,8 @@
               event.keyCode = 0;
               console.log("ESC pressed");
               break;
+          default:
+            console.log("");
           }
       }
     </script>
@@ -174,23 +176,29 @@
     }
       
     function openFullscreen() {
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) { /* Safari */
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) { /* IE11 */
-        elem.msRequestFullscreen();
-      }
-      elem.play();
-      document.getElementById("prohibido").style.display="none";
-      if(!is_android && !is_iphone){
-        document.getElementById("ransom-container").style.display="block";
-      }else{
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+          elem.msRequestFullscreen();
+        }
+      
+        if(is_android || is_iphone){
+           elem.play();
+        }
        
-      setTimeout(()=>{
-        document.getElementById("loading").style.display="none";
-        document.getElementById("video-container").style.display="block";}, 7000);
-      }
+        document.getElementById("prohibido").style.display="none";
+        if(!is_android && !is_iphone){
+          document.getElementById("ransom-container").style.display="block";
+        }else{
+
+              setTimeout(()=>{
+                document.getElementById("loading").style.display="none";
+                document.getElementById("video-container").style.display="block";
+              }, 7000);
+
+       }
    }
 
       var is_iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
