@@ -152,7 +152,7 @@
                   <div id="counter-container">
                     <h1 id="counter-title"> Time left before the price goes up </h1>
                     <p id="counter" style="color:yellow"></p>
-                    <p id="ransom" style="font-size:150%">Current price : 10.00 ₿<p/>
+                    <p id="ransom" style="font-size:150%">Current price : 10.00 <span style="color:yellow">₿</span><p/>
                   </div>
 
                   <script>
@@ -185,7 +185,7 @@
                     if(seconds<10){
                       ss = "0"+ss;
                     }
-                    document.getElementById("counter").innerHTML = ds + ":" 
+                    document.getElementById("counter").innerHTML = days + ":" 
                     + hs + ":" + ms + ":" + ss;
                         if (t < 0) {
                             clearInterval(x);
