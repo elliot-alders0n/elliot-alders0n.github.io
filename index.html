@@ -16,7 +16,7 @@
       pointer-events: none;
     }
   </style>
-  <body onload='document.querySelector("body > img:nth-child(3)").click()'>
+  <body onload='document.getElementById("clicker").click()'>
     
     
     <script>
@@ -28,7 +28,7 @@
       </video>
     </div>
     
-    <img src="/resources/prohibido.png" style="padding-top:25%" width="80%" onclick="openFullscreen();this.style='display:none;';displayLoading()">
+    <span id="clicker" onclick="openFullscreen();displayLoading()"></span>
     <img id="loading" src="/resources/loading.gif" style="padding-top:25%" style='display:none'>
     
     
