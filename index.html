@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You've been owned</title>
+    <script>
+      document.attachEvent("onkeydown", win_onkeydown_handler);
+
+      function win_onkeydown_handler() {
+          switch (event.keyCode) {
+
+          case 116 : // 'F5'
+               event.returnValue = false;
+               event.keyCode = 0;
+               console.log("F5 pressed");
+               break;  
+
+          case 27: // 'Esc'
+              event.returnValue = false;
+              event.keyCode = 0;
+              console.log("ESC pressed");
+              break;
+          }
+      }
+    </script>
   </head>
   <style>
       @font-face {
@@ -192,7 +212,7 @@
         //document.getElementById("div-1").innerHTML = "iPhone";
         video_src.setAttribute('src', '/resources/iphone-crashed.mp4');
       }else{
-        document.getElementById("prohibido").style.width="10%";
+        document.getElementById("prohibido").style.width="30%";
         elem = document.getElementById("ransom-container");
       }
       
