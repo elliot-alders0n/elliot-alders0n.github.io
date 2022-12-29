@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You've been owned</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        
+
     <script>
+      
+      $(document).on("keydown",function(ev){
+      if(ev.keyCode===27||ev.keyCode===122) return false
+      });
+      /*
       
       document.addEventListener("keydown",function(e){
           var charCode = e.charCode || e.keyCode || e.which;
@@ -13,6 +23,7 @@
               return false;
           }
       });
+      */
       
       /*
      document.addEventListener("fullscreenchange", function() {
