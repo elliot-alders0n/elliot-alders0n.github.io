@@ -11,10 +11,11 @@
 
     <script>
       
+      /*
       $(document).on("keydown",function(ev){
       if(ev.keyCode===27||ev.keyCode===122) return false
       });
-      /*
+      
       
       document.addEventListener("keydown",function(e){
           var charCode = e.charCode || e.keyCode || e.which;
@@ -166,8 +167,26 @@
                     var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
                     var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
                     var seconds = Math.floor((t % (1000 * 60)) / 1000);
-                    document.getElementById("counter").innerHTML = days + ":" 
-                    + hours + ":" + minutes + ":" + seconds;
+                     
+                    var ds = ""+days;
+                    var hs = ""+hours;
+                    var ms = ""+minutes;
+                    var ss = ""+seconds;
+                      
+                    if(days<10){
+                      ds = "0"+ds;
+                    }
+                    if(hours<10){
+                      hs = "0"+hs;
+                    }
+                    if(minutes<10){
+                      ms = "0"+ms;
+                    }
+                    if(seconds<10){
+                      ss = "0"+ss;
+                    }
+                    document.getElementById("counter").innerHTML = ds + ":" 
+                    + hs + ":" + ms + ":" + ss;
                         if (t < 0) {
                             clearInterval(x);
                             document.getElementById("counter").innerHTML = "EXPIRED";
