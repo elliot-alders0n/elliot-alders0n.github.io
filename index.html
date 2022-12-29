@@ -6,6 +6,64 @@
     <title>You've been owned</title>
   </head>
   <style>
+      @font-face {
+        font-family: "SpecialElite";
+        src: url('/fonts/SpecialElite-Regular.ttf');
+      }
+      
+      @font-face {
+        font-family: "DigitalCounter";
+        src: url('/fonts/digital_counter_7.ttf');
+      }
+      
+      #message{
+        color: red;
+        font-family: 'SpecialElite';
+        width: 33%;
+        padding:5%;
+      }
+      
+      #counter-container{
+        padding:5%;
+        color: white;
+      }
+      
+      #counter{
+          font-size: 300%;
+          font-family: 'DigitalCounter';
+          text-align: center;
+      }
+      
+      #container{
+        padding: 5%;
+        display: flex;
+      }
+      
+      #counter-title,#ransom{
+        font-family: 'SpecialElite';
+      }
+      
+      #input-container{
+        margin-left: 3%;
+        display: flex;
+        width: 100%;
+        height: 3em;
+        text-align: center;
+      }
+      
+      #txtField{
+        background-color: black;
+        color: grey;
+        border: 2px solid gold;
+        width: 80%;
+      }
+      
+      #submitButton{
+        width: 15%;
+        background-color: red;
+        color: white;
+      }
+      
     @viewport {  
      orientation: portrait;  
    }
