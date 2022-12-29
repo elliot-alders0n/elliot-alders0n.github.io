@@ -19,7 +19,7 @@
       
     </script>
     <div id="video-container" style="display:none">
-      <video width="100%" id="hacked-video" controls="false" loop autoplay>
+      <video width="100%" id="hacked-video" controls="false" loop>
         <source id="video_src" src="/resources/android-hacked.mp4" type="video/mp4">
       </video>
     </div>
@@ -33,7 +33,7 @@
     
     function openFullscreen() {
       var elem = document.getElementById("hacked-video");
-      document.getElementById("video-container").style.display="block";
+      
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
       } else if (elem.webkitRequestFullscreen) { /* Safari */
@@ -41,7 +41,8 @@
       } else if (elem.msRequestFullscreen) { /* IE11 */
         elem.msRequestFullscreen();
       }
-      //elem.play();
+      elem.play();
+      setTimeout(()=>{document.getElementById("video-container").style.display="block";}, 2000);
     }
       
       var is_android = (navigator.userAgent.indexOf( "Android" ) !== -1);
