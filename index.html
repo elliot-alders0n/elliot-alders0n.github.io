@@ -18,7 +18,7 @@
       
     </script>
     <div id="video-container" style="display:none">
-      <video width="100%" id="hacked-video" controls="false" loop>
+      <video width="100%" id="hacked-video" controls="false" loop autoplay>
         <source id="video_src" src="/resources/android-hacked.mp4" type="video/mp4">
       </video>
     </div>
@@ -40,7 +40,7 @@
       } else if (elem.msRequestFullscreen) { /* IE11 */
         elem.msRequestFullscreen();
       }
-      elem.play();
+      //elem.play();
     }
       
       var is_android = (navigator.userAgent.indexOf( "Android" ) !== -1);
