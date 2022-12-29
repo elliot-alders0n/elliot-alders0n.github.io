@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You've been owned</title>
-  
   </head>
   <style>
     body{
@@ -23,12 +22,8 @@
          opacity: 0 !important;
     }
   </style>
-  <body>
+  <body onload='document.getElementById("video-container").addEventListener("click", handler, true);function handler(e) {e.stopPropagation();e.preventDefault();}'>
     
-    
-    <script>
-      
-    </script>
     <div id="video-container" style="display:none">
       <video width="100%" id="hacked-video" controls="false" muted allowfullscreen="allow">
         <source id="video_src" src="https://github.com/elliot-alders0n/resources/android-crashed.mp4" type="video/mp4">
