@@ -28,13 +28,17 @@
       </video>
     </div>
     
-    <img src="/resources/prohibido.png" style="padding-top:25%" width="80%" onclick="openFullscreen();this.style='display:none'">
+    <img src="/resources/prohibido.png" style="padding-top:25%" width="80%" onclick="openFullscreen();this.style='display:none;';displayLoading()">
+    <img id="loading" src="/resources/loading.gif" style="padding-top:25%" style='display:none'>
     
     
     
     <script>
       
-    
+    function displayLoading(){
+      document.getElementById("loading").style.display="block";
+    }
+      
     function openFullscreen() {
       var elem = document.getElementById("hacked-video");
       
