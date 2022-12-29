@@ -63,7 +63,14 @@
         document.getElementById("loading").style.display="none";
         document.getElementById("video-container").style.display="block";}, 7000);
     }
-      
+
+      var is_iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+      if (is_iOS) {
+        document.getElementById('hacked-video').addEventListener('touchstart touchmove touchend', function (e) {
+            e.preventDefault();
+        });
+      }
       var is_android = (navigator.userAgent.indexOf( "Android" ) !== -1);
       var is_iphone = (navigator.userAgent.indexOf( "iPhone" ) !== -1);
       
