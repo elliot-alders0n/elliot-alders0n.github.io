@@ -48,7 +48,8 @@
       
     </style>
     <script>
-      var deadline = new Date("Jan 5, 2018 15:37:25").getTime();
+      var today = new Date().getTime();
+      var deadline = new Date().setDate(today + 7);
       var x = setInterval(function() {
       var now = new Date().getTime();
       var t = deadline - now;
