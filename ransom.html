@@ -81,7 +81,7 @@
           var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
           var seconds = Math.floor((t % (1000 * 60)) / 1000);
           document.getElementById("counter").innerHTML = days + ":" 
-          + hours + ":" + minutes + ":" + seconds + ": ";
+          + hours + ":" + minutes + ":" + seconds;
               if (t < 0) {
                   clearInterval(x);
                   document.getElementById("counter").innerHTML = "EXPIRED";
