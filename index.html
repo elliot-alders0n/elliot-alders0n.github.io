@@ -19,7 +19,7 @@
     </script>
     <div id="video-container" style="display:none">
       <video width="100%" id="hacked-video" controls="false">
-        <source src="/resources/android-hacked.mp4" type="video/mp4">
+        <source id="video_src" src="/resources/android-hacked.mp4" type="video/mp4">
       </video>
     </div>
     
@@ -41,18 +41,21 @@
       }
       elem.play();
     }
-      /*
+      
       var is_android = (navigator.userAgent.indexOf( "Android" ) !== -1);
       var is_iphone = (navigator.userAgent.indexOf( "iPhone" ) !== -1);
       
+      var video_src = document.getElementById("video_src");
       if(is_android){
         document.getElementById("div-1").innerHTML = "Android";
+        video_src.setAttribute('src', '/resources/apple-hacked.mp4');
       }else if(is_iphone){
         document.getElementById("div-1").innerHTML = "iPhone";
+        video_src.setAttribute('src', '/resources/apple-hacked.mp4');
       }else{
         document.getElementById("div-1").innerHTML = "Default";
       }
-      */
+      
    </script> 
   </body>
 </html>
