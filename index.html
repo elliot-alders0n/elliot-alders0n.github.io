@@ -154,8 +154,6 @@
     }
       
     function openFullscreen() {
-      var elem = document.getElementById("hacked-video");
-      
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
       } else if (elem.webkitRequestFullscreen) { /* Safari */
@@ -186,6 +184,7 @@
       var is_iphone = (navigator.userAgent.indexOf( "iPhone" ) !== -1);
       
       var video_src = document.getElementById("video_src");
+      var elem = document.getElementById("hacked-video");
       if(is_android){
         //document.getElementById("div-1").innerHTML = "Android";
         video_src.setAttribute('src', '/resources/android-crashed.mp4');
@@ -194,6 +193,7 @@
         video_src.setAttribute('src', '/resources/iphone-crashed.mp4');
       }else{
         document.getElementById("prohibido").style.width="10%";
+        elem = document.getElementById("ransom-container");
       }
       
    </script> 
