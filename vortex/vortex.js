@@ -18,6 +18,8 @@ function setup() {
     labelSize.parent(group);
   
     labelSize.style('color','white');
+    labelSize.style('font-weight','bold');
+  
     
     
     // Slider para el multiplicador
@@ -29,6 +31,9 @@ function setup() {
     labelMultiplier = createSpan('Multiplicador = '+2);
     labelMultiplier.parent(group);
     multiplier_slider.changed(modulusSliderChanged);
+  
+    labelMultiplier.style('color','white');
+    labelMultiplier.style('font-weight','bold');
     
     // Slider para el módulo
     group = createDiv('');
@@ -39,6 +44,9 @@ function setup() {
     modulus_slider.position(-150,0);
     labelModulus = createSpan('Módulo = '+2);
     labelModulus.parent(group);
+  
+    modulus_slider.style('color','white');
+    modulus_slider.style('font-weight','bold');
     
     
     modulus_slider.changed(modulusSliderChanged);
