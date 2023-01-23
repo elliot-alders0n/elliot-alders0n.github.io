@@ -5,7 +5,7 @@ function setup() {
     
     createCanvas(CANVAS_SIZE, CANVAS_SIZE);
     
-    N = 49;
+    N = 9;
     M = 2;
     
     // Slider para el tamaño
