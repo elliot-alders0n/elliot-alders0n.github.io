@@ -34,7 +34,6 @@ function setup() {
     labelMultiplier.parent(group);
     multiplier_slider.changed(modulusSliderChanged);
   
-    group.parent('main');
     labelMultiplier.style('color','white');
     labelMultiplier.style('font-weight','bold');
     
