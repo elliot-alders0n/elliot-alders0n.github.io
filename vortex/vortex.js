@@ -16,6 +16,8 @@ function setup() {
     main_radius_slider.position(-150,0);
     labelSize = createSpan('Tamaño = '+100);
     labelSize.parent(group);
+  
+    labelSize.style('color','white');
     
     
     // Slider para el multiplicador
