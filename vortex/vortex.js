@@ -4,8 +4,6 @@ function setup() {
     CANVAS_MARGIN = 0.05;
     
     canvas = createCanvas(CANVAS_SIZE, CANVAS_SIZE);
-  
-    canvas.style('text-align','center');
     
     N = 9;
     M = 2;
