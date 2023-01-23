@@ -93,8 +93,8 @@ function setup() {
     //modulus = modulus_slider.value();
     //mult = multiplier_slider.value();
   
-    labelMultiplier.html("Multiplicador = "+mult);
-    labelModulus.html("Módulo = " + modulus);
+    labelMultiplier.html("Multiplicador : "+mult);
+    labelModulus.html("Módulo : " + modulus);
     translate(width/2,height/2);
     //drawMainCircle(r);
     generateCoordinates(modulus);
