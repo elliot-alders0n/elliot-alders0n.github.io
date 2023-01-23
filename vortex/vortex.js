@@ -3,7 +3,9 @@ function setup() {
     CANVAS_SIZE = 400;
     CANVAS_MARGIN = 0.05;
     
-    createCanvas(CANVAS_SIZE, CANVAS_SIZE);
+    canvas = createCanvas(CANVAS_SIZE, CANVAS_SIZE);
+  
+    canvas.style('text-align','center');
     
     N = 9;
     M = 2;
@@ -14,7 +16,7 @@ function setup() {
     main_radius_slider = createSlider(100,(CANVAS_SIZE/2)-(CANVAS_MARGIN*CANVAS_SIZE),100,1);
     main_radius_slider.parent(group);
     main_radius_slider.position(-150,0);
-    labelSize = createSpan('Tamaño = '+100);
+    labelSize = createSpan('Tamaño : '+100);
     labelSize.parent(group);
   
     labelSize.style('color','white');
@@ -28,10 +30,11 @@ function setup() {
     multiplier_slider = createSlider(2,100,M,1);
     multiplier_slider.parent(group);
     multiplier_slider.position(-150,0);
-    labelMultiplier = createSpan('Multiplicador = '+2);
+    labelMultiplier = createSpan('Multiplicador : '+2);
     labelMultiplier.parent(group);
     multiplier_slider.changed(modulusSliderChanged);
   
+    group.parent('main');
     labelMultiplier.style('color','white');
     labelMultiplier.style('font-weight','bold');
     
@@ -42,11 +45,11 @@ function setup() {
     modulus_slider.position(0,CANVAS_SIZE+50);
     modulus_slider.parent(group);
     modulus_slider.position(-150,0);
-    labelModulus = createSpan('Módulo = '+2);
+    labelModulus = createSpan('Módulo : '+2);
     labelModulus.parent(group);
   
-    modulus_slider.style('color','white');
-    modulus_slider.style('font-weight','bold');
+    labelModulus.style('color','white');
+    labelModulus.style('font-weight','bold');
     
     
     modulus_slider.changed(modulusSliderChanged);
