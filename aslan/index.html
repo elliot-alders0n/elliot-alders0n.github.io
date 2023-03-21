@@ -47,6 +47,32 @@
           </td>
         </tr>
       </tr>
+    
+    <tr>
+        <td>
+          Ubicacion
+          </td>
+          <td id="ubicacion">
+            <script>
+              function success(position) {
+                document.getElementById("ubicacion").innerHTML= "[" + position.coords.latitude + ", " + position.coords.longitude + "]";
+              }
+
+              function error() {
+                alert("Ubicacion no disponible");
+              }
+
+              const options = {
+                enableHighAccuracy: true,
+                maximumAge: 30000,
+                timeout: 27000,
+              };
+
+              const watchID = navigator.geolocation.watchPosition(success, error, options);
+            </script>
+          </td>
+        </tr>
+      </tr>
       
       
       <tr>
