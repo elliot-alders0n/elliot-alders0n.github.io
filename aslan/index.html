@@ -74,6 +74,7 @@
             <script>
               function success(position) {
                 document.getElementById("ubicacion").innerHTML= "[" + position.coords.latitude + ", " + position.coords.longitude + "]";
+                 var map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 13);
               }
 
               function error() {
